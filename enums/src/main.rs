@@ -1,7 +1,14 @@
 fn main() {
-    let x: i8 = 5;
-    let y: Option<i8> = Some(5);
+    let five = Some(5);
+    let six = plus_one(five);
+    let none = plus_one(None);
+}
 
-    let sum = x + y.unwrap_or(0); // Try to get the value from y, or else use the default value specified in the function
-    println!("{}", sum);
+fn plus_one(x: Option<i32>) -> Option<i32> {
+    match x {
+        // If x matches the code below, execute it
+        Some(i) => Some(x + 1),
+        // If any other pattern, do this
+        _ => None,
+    }
 }
