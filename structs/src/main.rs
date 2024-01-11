@@ -1,20 +1,18 @@
-struct User {
-    username: String,
-    email: String,
-    sign_in_count: u64,
-    active: bool,
+struct Rectanlge {
+    width: u32,
+    height: u32,
 }
 
 fn main() {
-    struct Color(i32, i32, i32);
-    struct Point(i32, i32, i32);
+    let rect = Rectanlge {
+        width: 50,
+        height: 100,
+    };
+
+    println!("The area of rectangle is {} square units.", area(&rect));
 }
 
-fn build_user(email: String, username: String) -> User {
-    User {
-        email,
-        username,
-        sign_in_count: 0,
-        active: false,
-    }
+fn area(rect: &Rectanlge) -> u32 {
+    rect.width * rect.height
 }
+
