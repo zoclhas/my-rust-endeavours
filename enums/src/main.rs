@@ -7,7 +7,7 @@ fn main() {
 fn plus_one(x: Option<i32>) -> Option<i32> {
     match x {
         // If x matches the code below, execute it
-        Some(i) => Some(x + 1),
+        Some(i) => Some(i + 1),
         // If any other pattern, do this
         _ => None,
     }
